@@ -1,5 +1,4 @@
 package org.vashonsd;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Runner {
+    // makes a list of runners along with class methods to use them in.
     String nameOfRunner;
     Map<LocalDate, Double> times = new HashMap<>();
     Double goal;
@@ -64,7 +64,7 @@ public class Runner {
         }
         return false;
     }
-
+    //  loops through map. return any days that met the goal
     public List<LocalDate> daysmetgoal(){
         List<LocalDate> metgoal = new ArrayList<LocalDate>();
         for(LocalDate date: times.keySet()) {
@@ -72,10 +72,9 @@ public class Runner {
                 metgoal.add(date);
             }
         }
-      //  loops through map. return any days that met the goal
         return metgoal;
     }
-
+// prints runner information
     @Override
     public String toString() {
         return "Runner{" +
